@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CatService } from '../services/cat.service';
 
 @Component({
   selector: 'app-vote',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(public catService: CatService) { }
 
   ngOnInit() {
   }

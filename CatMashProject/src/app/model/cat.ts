@@ -1,4 +1,4 @@
-export interface cat {
+export interface Cat {
     url: string;
     id: string;
     rating?: number;
