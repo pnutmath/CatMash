@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CatMashProject';
+  navLinks = [
+    { path: 'cat', label: 'cat' },
+    { path: 'vote', label: 'vote' },
+  ];
 }

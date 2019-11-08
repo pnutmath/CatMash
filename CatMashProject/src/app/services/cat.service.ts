@@ -12,7 +12,7 @@ export class CatService {
 
   constructor(private http: HttpClient) { }
 
-  getCat(): Observable<CatList> {
+  getCats(): Observable<CatList> {
     return this.http.get<CatList>('http://localhost:8080/cats').pipe(
       tap((catList: CatList) => {
         if (this.catVote.length === 0) {

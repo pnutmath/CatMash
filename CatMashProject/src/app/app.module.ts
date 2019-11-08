@@ -7,7 +7,7 @@ import { CatComponent } from './cat/cat.component';
 import { VoteComponent } from './vote/vote.component';
 import { CatNotFoundComponent } from './cat-not-found/cat-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatTabsModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

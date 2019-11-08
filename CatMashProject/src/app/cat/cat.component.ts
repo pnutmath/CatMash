@@ -18,7 +18,7 @@ export class CatComponent implements OnInit {
   }
 
   showMeTwoCats() {
-    this.catService.getCat().subscribe((cats: CatList) => {
+    this.catService.getCats().subscribe((cats: CatList) => {
       this.allcats = cats.images;
       this.twoCatsArray = this.chooseTwoRandomCats(this.allcats);
     });
@@ -46,6 +46,7 @@ export class CatComponent implements OnInit {
   voteForThisCat(id: string) {
     const likedCatindex = this.allcats.findIndex((cat: Cat) => cat.id === id);
     const newRating = this.getIncrementedCatRatingValue(this.catService.catVote[likedCatindex].rating);
+    this.catService.catVote[likedCatindex].rating = newRating;
     this.twoCatsArray = this.chooseTwoRandomCats(this.allcats);
   }
 
