@@ -21,7 +21,8 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -119,6 +120,14 @@
             "production": {
               "devServerTarget": "CatMashProject:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/CatMashProject",
+            "netlifyToken": "2cb8aeb5-62e2-472b-be5b-3da87a7f572c",
+            "siteId": "d1865c183ce06c9cd4570036934c8ab93d4c523b73fe76493816ea9aa298ac44"
           }
         }
       }
